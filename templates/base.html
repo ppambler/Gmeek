@@ -14,6 +14,14 @@
     {% block head %}{% endblock %}
 </head>
 <style>
+html[data-color-mode="light"] {
+	background: #f5f5d5 !important;
+}
+
+html[data-color-mode="dark"],
+html[data-color-mode="dark"]>body {
+	background: #0d1117 !important;
+}
 body{
     box-sizing: border-box;
     min-width: 200px;
@@ -24,6 +32,90 @@ body{
     font-family: sans-serif;
     line-height: 1.25;
 }
+
+p img {
+    display: block;
+    box-shadow: 0 0 5px #555;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 0 10px #555;
+  }
+
+  p strong,
+  li strong {
+    color: #ec4863;
+    text-decoration: none;
+    background-image: linear-gradient(#ffda66, #ffda66);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 0 3px;
+    transition: background-size 500ms ease-in-out;
+    font-weight: 500;
+    padding-bottom: 4px;
+  }
+
+  p strong:hover {
+    background-size: 100% 3px;
+  }
+
+  h1+table {
+    margin-bottom: -16px !important;
+    font-weight: 500;
+  }
+
+  body {
+    background-color: #f5f5d5;
+  }
+
+  div.highlight {
+    border: .25em solid #e0dfcc;
+    border-radius: .4em;
+    background-color: #f5f2f0;
+  }
+
+  .markdown-body .highlight pre,
+  .markdown-body pre {
+    background-color: #f5f2f0;
+  }
+
+  a {
+    color: #0859b4;
+  }
+
+  .markdown-body h1 {
+    border-color: #d3d3d3;
+  }
+
+  .markdown-body h2 {
+    border-color: #d3d3d3;
+  }
+
+  .markdown-body hr {
+    background-color: #e0dfcc;
+  }
+
+  .markdown-body blockquote {
+    color: #7a8590;
+    border-color: #d1d3d5;
+  }
+
+  .markdown-body table tr {
+    background-color: #f5f5d5;
+  }
+
+  .markdown-body code,
+  .markdown-body tt {
+    background-color: rgba(255, 192, 203, 0.6);
+    border-radius: .375em;
+    margin: auto 3px;
+  }
+
+  mark {
+    background-color: #ffeb3b8f;
+  }
 
 .avatar {transition: 0.8s;}
 .avatar:hover {transform: scale(1.15) rotate(360deg);}
